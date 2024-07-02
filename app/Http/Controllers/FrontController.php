@@ -61,7 +61,8 @@ class FrontController extends Controller
     }
     public function agenda()
     {
-        return view('agenda');
+        $agenda = Agenda::orderBy('id', 'DESC')->get();
+        return view('agenda', compact('agenda'));
     }
     public function iujk()
     {
