@@ -53,6 +53,14 @@ Route::get('/profil/tupoksi', [FrontController::class, 'tupoksi']);
 Route::get('/berita/berita', [FrontController::class, 'berita']);
 Route::get('/berita/{id}/{slug}', [FrontController::class, 'detailBerita']);
 Route::get('/berita/agenda', [FrontController::class, 'agenda']);
+Route::get('/pelatihan/pelatihan', [FrontController::class, 'pelatihan']);
+Route::get('/pelatihan/sertifikasi', [FrontController::class, 'sertifikasi']);
+Route::get('/pelatihan/bimtek', [FrontController::class, 'bimtek']);
+
+Route::get('/pengawasan/tertib-usaha', [FrontController::class, 'usaha']);
+Route::get('/pengawasan/tertib-penyelenggaraan', [FrontController::class, 'penyelenggaraan']);
+Route::get('/pengawasan/tertib-pemanfaatan', [FrontController::class, 'pemanfaatan']);
+
 Route::get('/informasi/iujk', [FrontController::class, 'iujk']);
 Route::get('/informasi/tdup', [FrontController::class, 'tdup']);
 Route::get('/informasi/bu', [FrontController::class, 'bu']);

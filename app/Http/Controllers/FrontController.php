@@ -64,6 +64,30 @@ class FrontController extends Controller
         $agenda = Agenda::orderBy('id', 'DESC')->get();
         return view('agenda', compact('agenda'));
     }
+    public function pelatihan()
+    {
+        return view('pelatihan');
+    }
+    public function sertifikasi()
+    {
+        return view('sertifikasi');
+    }
+    public function bimtek()
+    {
+        return view('bimtek');
+    }
+    public function usaha()
+    {
+        return view('usaha');
+    }
+    public function penyelenggaraan()
+    {
+        return view('penyelenggaraan');
+    }
+    public function pemanfaatan()
+    {
+        return view('pemanfaatan');
+    }
     public function iujk()
     {
         $data = IUJK::orderBy('id', 'DESC')->get();

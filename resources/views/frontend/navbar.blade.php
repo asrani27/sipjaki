@@ -26,9 +26,9 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pengawasan <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="/pengawasan/standarbiaya">Tertib Usaha</a></li>
-        <li><a href="/pengawasan/standarbiaya">Tertib Penyelenggaraan</a></li>
-        <li><a href="/pengawasan/standarbiaya">Tertib Pemanfaatan</a></li>
+        <li><a href="/pengawasan/tertib-usaha">Tertib Usaha</a></li>
+        <li><a href="/pengawasan/tertib-penyelenggaraan">Tertib Penyelenggaraan</a></li>
+        <li><a href="/pengawasan/tertib-pemanfaatan">Tertib Pemanfaatan</a></li>
       </ul>
     </li>
     <li class="dropdown">
