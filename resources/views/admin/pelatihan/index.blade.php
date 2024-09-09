@@ -36,17 +36,28 @@
                   <th>Aksi</th>
                 </tr>
                 @foreach ($data as $key => $item)
-                {{-- <tr>
+                <tr>
                     <td class="text-center">{{$data->firstItem() + $key}}</td>
-                    <td>{{$item->isi}}</td>
-                    <td>{{$item->created_at}}</td>
+                    <td>{{$item->tahun}}</td>
+                    <td>{{$item->sumber_dana}}</td>
+                    <td>{{$item->nama}}</td>
+                    <td>{{$item->penanggung_jawab}}</td>
+                    <td>{{$item->kualifikasi}}</td>
+                    <td>{{$item->jenjang}}</td>
+                    <td>{{$item->klasifikasi}}</td>
+                    <td>{{$item->sub_klasifikasi}}</td>
+                    <td>{{$item->metode}}</td>
+                    <td>{{$item->waktu}}</td>
+                    <td>{{$item->selesai}}</td>
+                    <td>{{$item->lokasi}}</td>
+                    <td>{{$item->jam}}</td>
                     <td>
-                        <a href="/superadmin/pengumuman/edit/{{$item->id}}" class="btn btn-xs  btn-success"><i class="fa fa-edit"></i> Edit</a>
-                        <a href="/superadmin/pengumuman/delete/{{$item->id}}"
+                        <a href="/superadmin/pelatihan/pelatihan/edit/{{$item->id}}" class="btn btn-xs  btn-success"><i class="fa fa-edit"></i> Edit</a>
+                        <a href="/superadmin/pelatihan/pelatihan/delete/{{$item->id}}"
                             onclick="return confirm('Yakin ingin di hapus');"
                             class="btn btn-xs  btn-danger"><i class="fa fa-trash"></i> Delete</a>
                     </td>
-                </tr> --}}
+                </tr>
                 @endforeach
                 
               </tbody></table>

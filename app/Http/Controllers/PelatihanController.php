@@ -25,26 +25,20 @@ class PelatihanController extends Controller
     }
     public function store(Request $req)
     {
-        $check = Pelatihan::where('nama', $req->nama)->first();
-        if ($check != null) {
-            Session::flash('error', 'Nama layanan Sudah Ada');
-            return back();
-        } else {
-            Pelatihan::create($req->all());
-            Session::flash('success', 'Berhasil');
-            return redirect('/superadmin/pelatihan');
-        }
+        Pelatihan::create($req->all());
+        Session::flash('success', 'Berhasil');
+        return redirect('/superadmin/pelatihan/pelatihan');
     }
     public function update(Request $req, $id)
     {
         $data = Pelatihan::find($id)->update($req->all());
         Session::flash('success', 'Berhasil');
-        return redirect('/superadmin/pelatihan');
+        return redirect('/superadmin/pelatihan/pelatihan');
     }
     public function delete($id)
     {
         $data = Pelatihan::find($id)->delete();
         Session::flash('success', 'Berhasil');
-        return redirect('/superadmin/pelatihan');
+        return redirect('/superadmin/pelatihan/pelatihan');
     }
 }

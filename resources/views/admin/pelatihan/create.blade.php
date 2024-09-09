@@ -10,7 +10,7 @@
       </div>
       <!-- /.box-header -->
       <!-- form start -->
-      <form action="/superadmin/pengumuman/create" method="post">
+      <form action="/superadmin/pelatihan/pelatihan/create" method="post">
           @csrf
         <div class="box-body">
           <div class="row">
@@ -29,38 +29,101 @@
                 <label>Nama</label>
                 <input type="text" class="form-control" name='nama' placeholder="nama">
               </div>
+              <div class="form-group">
+                <label>Kualifikasi</label>
+                <select class="form-control select2" name="kualifikasi" required>
+                  <option value="" selected>-</option>
+                  @foreach (kualifikasi() as $item)
+                  <option value="{{$item->nama}}">{{$item->nama}}</option>
+                  @endforeach
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Klasifikasi</label>
+                <select class="form-control select2" name="klasifikasi" required>
+                  <option value="" selected>-</option>
+                  @foreach (klasifikasi() as $item)
+                  <option value="{{$item->nama}}">{{$item->nama}}</option>
+                  @endforeach
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Waktu Pelaksanaan</label>
+                <input type="date" class="form-control" name='waktu' required>
+              </div>
+              <div class="form-group">
+                <label>Metode Pelatihan</label>
+                <select class="form-control select2" name="metode" style="width: 100%;">
+                  <option value="REGULER" selected>REGULER</option>
+                  <option value="NONREGULER">NON REGULER</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Lokasi Pelatihan</label>
+                <input type="text" class="form-control" name='lokasi' placeholder="lokasi">
+              </div>
               
             </div>
             <!-- /.col -->
             <div class="col-md-6">
               <div class="form-group">
-                <label>Multiple</label>
-                <select class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a State" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
-                  <option>Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="8" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Select a State" style="width: 683px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                <label>Sumber Dana</label>
+            
+                <select class="form-control select2" name="sumber_dana" style="width: 100%;">
+                  <option value="APBD Kota Banjarmasin" selected>APBD Kota Banjarmasin</option>
+                  <option value="APBD Provinsi Kalimantan Selatan">APBD Provinsi Kalimantan Selatan</option>
+                  <option value="APBN">APBN</option>
+                </select>
               </div>
-              <!-- /.form-group -->
               <div class="form-group">
-                <label>Disabled Result</label>
-                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="9" tabindex="-1" aria-hidden="true">
-                  <option selected="selected" data-select2-id="11">Alabama</option>
-                  <option>Alaska</option>
-                  <option disabled="disabled">California (disabled)</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="10" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cff5-container"><span class="select2-selection__rendered" id="select2-cff5-container" role="textbox" aria-readonly="true" title="Alabama">Alabama</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                <label>Penanggung Jawab</label>
+                <input type="text" class="form-control" name='penanggung_jawab' required>
               </div>
-              <!-- /.form-group -->
+              <div class="form-group">
+                <label>Jenjang KKNI </label>
+            
+                <select class="form-control select2" name="sumber_dana" style="width: 100%;">
+                  <option value="" selected></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Sub Klasifikasi</label>
+                <select class="form-control select2" name="sub_klasifikasi" required>
+                  <option value="" selected>-</option>
+                  @foreach (subklasifikasi() as $item)
+                  <option value="{{$item->nama}}">{{$item->nama}}</option>
+                  @endforeach
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Selesai Pelaksanaan</label>
+                <input type="date" class="form-control" name='selesai' required>
+              </div>
+              <div class="form-group">
+                <label>Jam Pelajaran</label>
+                <input type="text" class="form-control" name='jam' required>
+              </div>
+              <div class="form-group">
+                <label>Keterangan</label>
+                <input type="text" class="form-control" name='keterangan' required>
+              </div>
+              
             </div>
             <!-- /.col -->
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-block btn-primary">SIMPAN</button>
+            </div>
           </div>
           
         </div>
@@ -73,5 +136,11 @@
 @endsection
 @push('js')
 <script src="/assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+  });
+</script>
 @endpush
 
