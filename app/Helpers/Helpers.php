@@ -1,5 +1,23 @@
 <?php
 
+use App\Models\Klasifikasi;
+use App\Models\Kualifikasi;
+use App\Models\SubKlasifikasi;
+
+function kualifikasi()
+{
+    return Kualifikasi::get();
+}
+
+function klasifikasi()
+{
+    return Klasifikasi::get();
+}
+
+function subklasifikasi()
+{
+    return SubKlasifikasi::get();
+}
 function tenor($bulan)
 {
     if ($bulan == 1) {
