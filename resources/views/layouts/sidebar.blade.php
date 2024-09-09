@@ -23,6 +23,7 @@
     <li class="{{ (request()->is('superadmin/berita*')) ? 'active' : '' }}"><a href="/superadmin/berita"><i class="fa fa-newspaper-o"></i> <span>Berita</span></a></li>
     <li class="{{ (request()->is('superadmin/agenda*')) ? 'active' : '' }}"><a href="/superadmin/agenda"><i class="fa fa-edit"></i> <span>Agenda</span></a></li>
     <li class="{{ (request()->is('superadmin/pengumuman*')) ? 'active' : '' }}"><a href="/superadmin/pengumuman"><i class="fa fa-bullhorn"></i> <span>Pengumuman</span></a></li>
+    <li class="{{ (request()->is('superadmin/peraturan*')) ? 'active' : '' }}"><a href="/superadmin/peraturan"><i class="fa fa-file"></i> <span>Upload Peraturan</span></a></li>
     <li class="{{ request()->is('superadmin/pelatihan/*') ? 'active' : '' }} treeview">
         <a href="#">
         <i class="fa fa-building"></i> <span>Pelatihan</span>

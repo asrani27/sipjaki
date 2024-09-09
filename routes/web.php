@@ -21,14 +21,17 @@ use App\Http\Controllers\MerkOliController;
 use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SetoranController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\DepositoController;
 use App\Http\Controllers\JenisOliController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\ValidasiController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PelatihanController;
 use App\Http\Controllers\PencairanController;
 use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\PeraturanController;
 use App\Http\Controllers\SparepartController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\SertifikatController;
@@ -38,8 +41,6 @@ use App\Http\Controllers\SerahTerimaController;
 use App\Http\Controllers\JenisLayananController;
 use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\GantiPasswordController;
-use App\Http\Controllers\PelatihanController;
-use App\Http\Controllers\SettingController;
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -108,6 +109,14 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/berita/edit/{id}', [BeritaController::class, 'edit']);
     Route::post('superadmin/berita/edit/{id}', [BeritaController::class, 'update']);
     Route::get('superadmin/berita/delete/{id}', [BeritaController::class, 'delete']);
+
+
+    Route::get('superadmin/peraturan', [PeraturanController::class, 'index']);
+    Route::get('superadmin/peraturan/create', [PeraturanController::class, 'create']);
+    Route::post('superadmin/peraturan/create', [PeraturanController::class, 'store']);
+    Route::get('superadmin/peraturan/edit/{id}', [PeraturanController::class, 'edit']);
+    Route::post('superadmin/peraturan/edit/{id}', [PeraturanController::class, 'update']);
+    Route::get('superadmin/peraturan/delete/{id}', [PeraturanController::class, 'delete']);
 
     Route::get('superadmin/agenda', [AgendaController::class, 'index']);
     Route::get('superadmin/agenda/create', [AgendaController::class, 'create']);

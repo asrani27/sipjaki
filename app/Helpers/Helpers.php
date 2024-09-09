@@ -3,6 +3,7 @@
 use App\Models\Setting;
 use App\Models\Klasifikasi;
 use App\Models\Kualifikasi;
+use App\Models\Peraturan;
 use App\Models\SubKlasifikasi;
 
 function logoHeader()
@@ -10,6 +11,10 @@ function logoHeader()
     return Setting::where('nama', 'header')->first()->file;
 }
 
+function peraturan()
+{
+    return Peraturan::get();
+}
 function kualifikasi()
 {
     return Kualifikasi::get();

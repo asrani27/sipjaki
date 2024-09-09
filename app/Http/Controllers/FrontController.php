@@ -132,70 +132,48 @@ class FrontController extends Controller
     }
     public function undangundang()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('undangundang');
     }
     public function pp()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('pp');
     }
     public function perpres()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('perpres');
     }
     public function permen()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('permen');
     }
     public function kepmen()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('kepmen');
     }
     public function edaran()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('edaran');
     }
 
     public function referensi()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('referensi');
     }
 
     public function perda()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('perda');
     }
     public function pergub()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('pergub');
     }
     public function perwali()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('perwali');
     }
     public function sk()
     {
-        Session::flash('info', 'Dalam Pengembangan');
-        return back();
         return view('sk');
     }
     public function forum()
