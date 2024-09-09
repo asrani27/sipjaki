@@ -38,9 +38,8 @@
 background: linear-gradient(72deg, rgba(51,95,185,1) 0%, rgba(242,143,7,1) 100%);">
     <br/><br/>
 <div class="wrapper">
-    <div style="background: rgb(182,182,231);
-    background: linear-gradient(72deg, rgba(182,182,231,1) 0%, rgba(250,240,204,1) 100%);">
-        <img src="/assets/logo_bjm.png" width="150px"><span style="font-size: 32px; font-weight:bold; color:#233260; padding-left:10px">SISTEM INFORMASI PEMBINA</span> <span style="font-size: 32px; font-weight:bold; color:#f4ae08">JASA KONSTRUKSI </span><img src="/assets/sipjaki.png" width="350px" style="padding: 40px 30px">
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Big_Banner_Example.png" width="100%" height="200px">
     </div>
   <header class="main-header">
     <nav class="navbar navbar-static-top">

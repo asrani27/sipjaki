@@ -63,7 +63,10 @@
 
 <script>
 $(document).ready(function() {
-  $('#summernote').summernote();
+  $('#summernote').summernote().on("summernote.enter", function(we, e) {
+  $(this).summernote('pasteHTML', '<br>&VeryThinSpace;');
+  e.preventDefault();
+});
 });
 </script>
 @endpush

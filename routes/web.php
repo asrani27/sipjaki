@@ -38,6 +38,7 @@ use App\Http\Controllers\SerahTerimaController;
 use App\Http\Controllers\JenisLayananController;
 use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\GantiPasswordController;
+use App\Http\Controllers\PelatihanController;
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -131,6 +132,13 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/jenislayanan/edit/{id}', [JenisLayananController::class, 'edit']);
     Route::post('superadmin/jenislayanan/edit/{id}', [JenisLayananController::class, 'update']);
     Route::get('superadmin/jenislayanan/delete/{id}', [JenisLayananController::class, 'delete']);
+
+    Route::get('superadmin/pelatihan/pelatihan', [PelatihanController::class, 'index']);
+    Route::get('superadmin/pelatihan/pelatihan/create', [PelatihanController::class, 'create']);
+    Route::post('superadmin/pelatihan/pelatihan/create', [PelatihanController::class, 'store']);
+    Route::get('superadmin/pelatihan/pelatihan/edit/{id}', [PelatihanController::class, 'edit']);
+    Route::post('superadmin/pelatihan/pelatihan/edit/{id}', [PelatihanController::class, 'update']);
+    Route::get('superadmin/pelatihan/pelatihan/delete/{id}', [PelatihanController::class, 'delete']);
 
     Route::get('superadmin/penjualan', [PenjualanController::class, 'index']);
     Route::get('superadmin/penjualan/create', [PenjualanController::class, 'create']);

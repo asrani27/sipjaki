@@ -49,9 +49,9 @@ class FrontController extends Controller
     }
     public function berita()
     {
-        $data1 = Berita::orderBy('id', 'DESC')->take(3);
+        $berita = Berita::orderBy('id', 'DESC')->get();
 
-        return view('berita');
+        return view('berita', compact('berita'));
     }
 
     public function detailBerita($id, $slug)

@@ -23,6 +23,20 @@
     <li class="{{ (request()->is('superadmin/berita*')) ? 'active' : '' }}"><a href="/superadmin/berita"><i class="fa fa-newspaper-o"></i> <span>Berita</span></a></li>
     <li class="{{ (request()->is('superadmin/agenda*')) ? 'active' : '' }}"><a href="/superadmin/agenda"><i class="fa fa-edit"></i> <span>Agenda</span></a></li>
     <li class="{{ (request()->is('superadmin/pengumuman*')) ? 'active' : '' }}"><a href="/superadmin/pengumuman"><i class="fa fa-bullhorn"></i> <span>Pengumuman</span></a></li>
+    <li class="{{ request()->is('superadmin/pelatihan/*') ? 'active' : '' }} treeview">
+        <a href="#">
+        <i class="fa fa-building"></i> <span>Pelatihan</span>
+        <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+        <li class="{{ request()->is('superadmin/pelatihan/pelatihan') ? 'active' : '' }}"><a href="/superadmin/pelatihan/pelatihan"><i class="fa fa-circle-o {{ request()->is('superadmin/pelatihan/pelatihan') ? 'text-yellow' : '' }}"></i> Pelatihan</a></li>
+        {{-- <li class="{{ request()->is('superadmin/pelatihan/sertifikasi') ? 'active' : '' }}"><a href="/superadmin/pelatihan/sertifikasi"><i class="fa fa-circle-o {{ request()->is('superadmin/pelatihan/sertifikasi') ? 'text-yellow' : '' }}"></i> sertifikasi</a></li>
+        <li class="{{ request()->is('superadmin/pelatihan/bimtek') ? 'active' : '' }}"><a href="/superadmin/pelatihan/bimtek"><i class="fa fa-circle-o {{ request()->is('superadmin/pelatihan/bimtek') ? 'text-yellow' : '' }}"></i> bimtek</a></li> --}}
+
+        </ul>
+    </li>
     <li class="{{ (request()->is('superadmin/forum*')) ? 'active' : '' }}"><a href="/superadmin/forum"><i class="fa fa-comments-o"></i> <span>Forum</span></a></li>
     <li class="header">SETTING</li>
     
