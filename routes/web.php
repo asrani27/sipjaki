@@ -100,6 +100,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::post('superadmin/profil/tupoksi', [ProfilController::class, 'update_tupoksi']);
 
     Route::get('superadmin/header', [SettingController::class, 'header']);
+    Route::post('superadmin/header', [SettingController::class, 'updateHeader']);
 
     Route::get('superadmin/berita', [BeritaController::class, 'index']);
     Route::get('superadmin/berita/create', [BeritaController::class, 'create']);

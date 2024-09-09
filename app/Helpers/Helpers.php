@@ -1,8 +1,14 @@
 <?php
 
+use App\Models\Setting;
 use App\Models\Klasifikasi;
 use App\Models\Kualifikasi;
 use App\Models\SubKlasifikasi;
+
+function logoHeader()
+{
+    return Setting::where('nama', 'header')->first()->file;
+}
 
 function kualifikasi()
 {

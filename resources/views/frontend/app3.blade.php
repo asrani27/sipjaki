@@ -39,7 +39,7 @@ background: linear-gradient(72deg, rgba(51,95,185,1) 0%, rgba(242,143,7,1) 100%)
     <br/><br/>
 <div class="wrapper">
     <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Big_Banner_Example.png" width="100%" height="200px">
+        <img src="/storage/header/{{logoHeader()}}" width="100%" height="250px">
     </div>
   <header class="main-header">
     <nav class="navbar navbar-static-top">

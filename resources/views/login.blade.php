@@ -91,6 +91,7 @@
                     <label class="col-sm-2 control-label"></label>
                     <div class="col-sm-10">
                       <button type="submit" class="btn bg-navy btn-block pull-right"  style="border-radius: 20px"><i class="fa fa-sign-in"></i> MASUK</button>
+                      <a href="/" class="btn bg-silver btn-block pull-right"  style="border-radius: 20px"><i class="fa fa-arrow-left"></i> KE BERANDA</a>
                     </div>
                   </div>
                 </div>

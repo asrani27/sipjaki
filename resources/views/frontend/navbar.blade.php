@@ -64,4 +64,5 @@
       </ul>
     </li>
     <li><a href="/forum">Forum</a></li>
+    <li><a href="/login">Login</a></li>
   </ul>

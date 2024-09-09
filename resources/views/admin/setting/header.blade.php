@@ -18,16 +18,17 @@
             <!-- /.box-header -->
             <!-- form start -->
             
-            <form class="form-horizontal" action="/superadmin/header" method="post">
+            <form class="form-horizontal" action="/superadmin/header" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="box-body">
                   <div class="form-group">
                     <div class="col-sm-12">
-                        <img src="{{$data->file}}">
+                        <img src="/storage/header/{{$data->file}}" height="250px">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-12">
+                        <input type="file" class="form-control" name="gambar"><br/>
                       <button type="submit" class="btn btn-success btn-block"><i class="fa fa-save"></i> Update</button>
                     </div>
                   </div>
