@@ -39,6 +39,7 @@ use App\Http\Controllers\JenisLayananController;
 use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\GantiPasswordController;
 use App\Http\Controllers\PelatihanController;
+use App\Http\Controllers\SettingController;
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -97,6 +98,8 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::post('superadmin/profil/renstra', [ProfilController::class, 'update_renstra']);
     Route::get('superadmin/profil/tupoksi', [ProfilController::class, 'tupoksi']);
     Route::post('superadmin/profil/tupoksi', [ProfilController::class, 'update_tupoksi']);
+
+    Route::get('superadmin/header', [SettingController::class, 'header']);
 
     Route::get('superadmin/berita', [BeritaController::class, 'index']);
     Route::get('superadmin/berita/create', [BeritaController::class, 'create']);

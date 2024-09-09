@@ -40,6 +40,7 @@
     <li class="{{ (request()->is('superadmin/forum*')) ? 'active' : '' }}"><a href="/superadmin/forum"><i class="fa fa-comments-o"></i> <span>Forum</span></a></li>
     <li class="header">SETTING</li>
     
+    <li><a href="/superadmin/header"><i class="fa fa-image"></i> <span><i>Header Logo</i></span></a></li>
     <li><a href="/logout"><i class="fa fa-sign-out"></i> <span><i>Logout</i></span></a></li>
    
     
