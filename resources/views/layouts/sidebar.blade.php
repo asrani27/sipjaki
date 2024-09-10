@@ -38,6 +38,7 @@
 
         </ul>
     </li>
+    <li class="{{ (request()->is('superadmin/potensipasar*')) ? 'active' : '' }}"><a href="/superadmin/potensipasar"><i class="fa fa-university"></i> <span>Potensi Pasar</span></a></li>
     <li class="{{ (request()->is('superadmin/forum*')) ? 'active' : '' }}"><a href="/superadmin/forum"><i class="fa fa-comments-o"></i> <span>Forum</span></a></li>
     <li class="header">SETTING</li>
     

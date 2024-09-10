@@ -1,8 +1,11 @@
 <?php
 
+use App\Models\Infrastruktur;
 use App\Models\Setting;
 use App\Models\Klasifikasi;
 use App\Models\Kualifikasi;
+use App\Models\Layanan;
+use App\Models\Pelatihan;
 use App\Models\Peraturan;
 use App\Models\SubKlasifikasi;
 
@@ -14,6 +17,19 @@ function logoHeader()
 function peraturan()
 {
     return Peraturan::get();
+}
+
+function infrastruktur()
+{
+    return Infrastruktur::get();
+}
+function layanan()
+{
+    return Layanan::get();
+}
+function pelatihan()
+{
+    return Pelatihan::orderBy('id', 'DESC')->get();
 }
 function kualifikasi()
 {

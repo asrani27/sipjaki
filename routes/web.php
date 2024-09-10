@@ -20,6 +20,7 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MerkOliController;
 use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PotensiController;
 use App\Http\Controllers\SetoranController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\DepositoController;
@@ -145,6 +146,13 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/jenislayanan/edit/{id}', [JenisLayananController::class, 'edit']);
     Route::post('superadmin/jenislayanan/edit/{id}', [JenisLayananController::class, 'update']);
     Route::get('superadmin/jenislayanan/delete/{id}', [JenisLayananController::class, 'delete']);
+
+    Route::get('superadmin/potensipasar', [PotensiController::class, 'index']);
+    Route::get('superadmin/potensipasar/create', [PotensiController::class, 'create']);
+    Route::post('superadmin/potensipasar/create', [PotensiController::class, 'store']);
+    Route::get('superadmin/potensipasar/edit/{id}', [PotensiController::class, 'edit']);
+    Route::post('superadmin/potensipasar/edit/{id}', [PotensiController::class, 'update']);
+    Route::get('superadmin/potensipasar/delete/{id}', [PotensiController::class, 'delete']);
 
     Route::get('superadmin/pelatihan/pelatihan', [PelatihanController::class, 'index']);
     Route::get('superadmin/pelatihan/pelatihan/create', [PelatihanController::class, 'create']);
