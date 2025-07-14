@@ -91,8 +91,8 @@ Route::get('/forum/{id}/{slug}', [FrontController::class, 'detailForum']);
 
 Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/beranda', [HomeController::class, 'superadmin']);
-    Route::get('superadmin/gp', [GantiPasswordController::class, 'index']);
-    Route::post('superadmin/gp', [GantiPasswordController::class, 'update']);
+    Route::get('superadmin/gantipass', [GantiPasswordController::class, 'index']);
+    Route::post('superadmin/gantipass', [GantiPasswordController::class, 'update']);
 
     Route::get('superadmin/profil/struktur', [ProfilController::class, 'struktur']);
     Route::post('superadmin/profil/struktur', [ProfilController::class, 'update_struktur']);
