@@ -1,37 +1,38 @@
 @extends('layouts.app')
 @push('css')
-    
+
 @endpush
 @section('content')
 <div class="row text-center">
-<h3>Selamat Datang</h3>
+  <h3>Selamat Datang</h3>
 </div>
 
 <div class="row">
   <div class="col-md-12">
 
-    <form class="form-horizontal" method="post" action="/superadmin/gp">
+    <form class="form-horizontal" method="post" action="/superadmin/gantipass">
       @csrf
-    <div class="box-body">
-      <div class="form-group">
+      <div class="box-body">
+        <div class="form-group">
           <label class="col-sm-2 control-label">Password Baru</label>
           <div class="col-sm-10">
-              <input type="text" class="form-control" name="password1" required>
+            <input type="text" class="form-control" name="password1" required>
           </div>
-      </div>
-      <div class="form-group">
+        </div>
+        <div class="form-group">
           <label class="col-sm-2 control-label">Masukkan Lagi</label>
           <div class="col-sm-10">
-              <input type="text" class="form-control" name="password2" required>
+            <input type="text" class="form-control" name="password2" required>
           </div>
-      </div>
-      <div class="form-group">
+        </div>
+        <div class="form-group">
           <label class="col-sm-2 control-label"></label>
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-block btn-flat bg-purple pull-right"><i class="fa fa-save"></i> Update</button>
+            <button type="submit" class="btn btn-block btn-flat bg-purple pull-right"><i class="fa fa-save"></i>
+              Update</button>
           </div>
+        </div>
       </div>
-    </div>
     </form>
   </div>
 </div>
@@ -40,7 +41,7 @@
 
 <script src="/assets/bower_components/chart.js/Chart.js"></script>
 <script>
-    $(function () {
+  $(function () {
       /* ChartJS
        * -------
        * Here we will create a few charts using ChartJS
