@@ -59,6 +59,22 @@
                       <input type="file" name="file" class="form-control" required>
                     </div>
                   </div>
+                  {{-- <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Status</label>
+                    <div class="col-sm-10">
+                      <select class="form-control" required>
+                        <option value=""></option>
+                        <option value="BERLAKU">BERLAKU</option>
+                        <option value="TIDAK BERLAKU">TIDAK BERLAKU</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">File (PDF)</label>
+                    <div class="col-sm-10">
+                      <input type="file" name="file" class="form-control" required>
+                    </div>
+                  </div> --}}
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label"></label>
                     <div class="col-sm-10">
