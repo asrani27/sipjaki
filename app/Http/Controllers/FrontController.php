@@ -25,6 +25,7 @@ class FrontController extends Controller
             }
         }
         $berita = Berita::orderBy('id', 'DESC')->limit(6)->get()->split(2);
+        dd($berita);
         $data1 = $berita[0];
         $data2 = $berita[1];
 
