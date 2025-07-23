@@ -89,7 +89,7 @@
                 style="background: url('https://system.mas-kargo.co.id/upload/foto_penerima/no.jpg') center center; height:200px; background-size:100% 100%;">
                 @else
                 <div class="widget-user-header bg-black"
-                    style="background: url('/storage/gambar/{{$item->gambar}}') center center; height:200px; background-size:100% 100%;">
+                    style="background: url('https://minio.banjarmasinkota.go.id/asrani/sipjaki/{{$item->gambar}}') center center; height:200px; background-size:100% 100%;">
                     @endif
                 </div>
 
@@ -137,7 +137,7 @@
                     style="background: url('https://system.mas-kargo.co.id/upload/foto_penerima/no.jpg') center center; height:200px; background-size:100% 100%;">
                     @else
                     <div class="widget-user-header bg-black"
-                        style="background: url('/storage/gambar/{{$item->gambar}}') center center; height:200px; background-size:100% 100%;">
+                        style="background: url('https://minio.banjarmasinkota.go.id/asrani/sipjaki/{{$item->gambar}}') center center; height:200px; background-size:100% 100%;">
                         @endif
                     </div>
 

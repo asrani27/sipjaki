@@ -6,6 +6,7 @@ use App\Models\Berita;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class BeritaController extends Controller
@@ -43,8 +44,9 @@ class BeritaController extends Controller
 
         $gambar = $req->file('gambar');
         $ext = $req->gambar->getClientOriginalExtension();
-        $filename = 'gambar' . uniqid() . '.' . $ext;
-        $gambar->move($path, $filename);
+        $filename = 'berita-' . uniqid() . '.' . $ext;
+        Storage::disk('minio')->putFileAs('sipjaki', $gambar, $filename);
+        //$gambar->move($path, $filename);
 
         $n = new Berita();
         $n->judul = $req->judul;
@@ -73,8 +75,9 @@ class BeritaController extends Controller
 
             $gambar = $req->file('gambar');
             $ext = $req->gambar->getClientOriginalExtension();
-            $filename = 'gambar' . uniqid() . '.' . $ext;
-            $gambar->move($path, $filename);
+            $filename = 'berita-' . uniqid() . '.' . $ext;
+            Storage::disk('minio')->putFileAs('sipjaki', $gambar, $filename);
+            //$gambar->move($path, $filename);
         } else {
             $filename = Berita::find($id)->gambar;
         }
