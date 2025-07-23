@@ -71,7 +71,6 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-
         <form class="form-horizontal" action="/superadmin/slide3" method="post" enctype="multipart/form-data">
           @csrf
           <div class="box-body">
