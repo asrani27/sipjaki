@@ -104,6 +104,11 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/header', [SettingController::class, 'header']);
     Route::post('superadmin/header', [SettingController::class, 'updateHeader']);
 
+    Route::get('superadmin/slideshow', [SettingController::class, 'slideshow']);
+    Route::post('superadmin/slide1', [SettingController::class, 'updateSlide1']);
+    Route::post('superadmin/slide2', [SettingController::class, 'updateSlide2']);
+    Route::post('superadmin/slide3', [SettingController::class, 'updateSlide3']);
+
     Route::get('superadmin/berita', [BeritaController::class, 'index']);
     Route::get('superadmin/berita/create', [BeritaController::class, 'create']);
     Route::post('superadmin/berita/create', [BeritaController::class, 'store']);

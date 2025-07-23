@@ -67,6 +67,7 @@
         <li class="header">SETTING</li>
 
         <li><a href="/superadmin/header"><i class="fa fa-image"></i> <span><i>Header Logo</i></span></a></li>
+        <li><a href="/superadmin/slideshow"><i class="fa fa-image"></i> <span><i>SlideShow</i></span></a></li>
         <li><a href="/superadmin/gantipass"><i class="fa fa-key"></i> <span><i>gantipass</i></span></a></li>
         <li><a href="/logout"><i class="fa fa-sign-out"></i> <span><i>Logout</i></span></a></li>
 

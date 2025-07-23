@@ -9,35 +9,36 @@
 @endpush
 @section('content')
 <section class="content">
-   <div class="row">
+  <div class="row">
     <div class="col-md-12">
-        <div class="box box-warning">
-            <div class="box-header with-border">
-              <h3 class="box-title"><i class="fa fa-clipboard"></i> Header Logo</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            
-            <form class="form-horizontal" action="/superadmin/header" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="box-body">
-                  <div class="form-group">
-                    <div class="col-sm-12">
-                        <img src="/storage/header/{{$data->file}}" height="250px">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="file" class="form-control" name="gambar"><br/>
-                      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-save"></i> Update</button>
-                    </div>
-                  </div>
+      <div class="box box-warning">
+        <div class="box-header with-border">
+          <h3 class="box-title"><i class="fa fa-clipboard"></i> Header Logo</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+
+        <form class="form-horizontal" action="/superadmin/header" method="post" enctype="multipart/form-data">
+          @csrf
+          <div class="box-body">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <img src="https://minio.banjarmasinkota.go.id/asrani/sipjaki/{{$data->file}}" height="250px"
+                  width="100%">
               </div>
-            </form>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="file" class="form-control" name="gambar"><br />
+                <button type="submit" class="btn btn-success btn-block"><i class="fa fa-save"></i> Update</button>
+              </div>
+            </div>
           </div>
+        </form>
+      </div>
     </div>
-   </div>
-    
+  </div>
+
 </section>
 
 
@@ -48,9 +49,8 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
 <script>
-$(document).ready(function() {
+  $(document).ready(function() {
   $('#summernote').summernote();
 });
 </script>
 @endpush
-
