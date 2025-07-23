@@ -54,7 +54,11 @@ class SettingController extends Controller
         $data1 = Setting::where('nama', 'slide1')->first();
         $data2 = Setting::where('nama', 'slide2')->first();
         $data3 = Setting::where('nama', 'slide3')->first();
-        return view('admin.setting.slideshow', compact('data1', 'data2', 'data3'));
+        $url1 = Storage::disk('minio')->temporaryUrl(
+            'sipjaki/' . $data1->file,
+            now()->addMinutes(5)
+        );
+        return view('admin.setting.slideshow', compact('data1', 'data2', 'data3', 'url1'));
     }
     public function updateSlide1(Request $req)
     {

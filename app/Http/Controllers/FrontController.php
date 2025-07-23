@@ -8,6 +8,7 @@ use App\Models\Forum;
 use App\Models\Agenda;
 use App\Models\Berita;
 use App\Models\Halaman;
+use App\Models\Setting;
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,11 @@ class FrontController extends Controller
 
         $agenda = Agenda::orderBy('id', 'DESC')->get();
         $pengumuman = Pengumuman::orderBy('id', 'DESC')->get();
-        return view('home', compact('data1', 'data2', 'agenda', 'pengumuman'));
+
+        $slide1 = Setting::where('nama', 'slide1')->first()->file;
+        $slide2 = Setting::where('nama', 'slide2')->first()->file;
+        $slide3 = Setting::where('nama', 'slide3')->first()->file;
+        return view('home', compact('data1', 'data2', 'agenda', 'pengumuman', 'slide1', 'slide2', 'slide3'));
     }
     public function struktur()
     {
